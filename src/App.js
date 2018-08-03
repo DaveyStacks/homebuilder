@@ -3,6 +3,7 @@ import Home from "./components/Home/Home";
 import { BrowserRouter, Route } from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
+import ResultsContainer from './components/searchandresults/'
 
 class App extends Component {
   render() {
@@ -13,10 +14,12 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route path="/hoodname/:name" />
             <Route path="/homemodel/:caption" />
+            <Route path="/listings" component={ResultsContainer} />
           </div>
         </div>
       </BrowserRouter>
     );
   }
 }
+
 export default App;

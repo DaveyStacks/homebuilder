@@ -1,0 +1,10 @@
+#container {
+    background: rgba(0,0,0,.2);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    overflow: scroll;
+    width: 500px;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+}

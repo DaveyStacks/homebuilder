@@ -1,0 +1,14 @@
+{
+  "name": "homebuilder",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "https://github.com/DaveyStacks/homebuilder",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
