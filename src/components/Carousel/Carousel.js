@@ -19,6 +19,20 @@ class ControlledCarousel extends React.Component {
     console.log(this.state);
   }
 
+
+
+
+
+  handleSelect(selectedIndex, e) {
+    this.setState({
+      index: selectedIndex,
+      direction: e.direction
+    });
+  }
+
+
+
+
   render() {
     const { index, direction } = this.state;
     let availableNeighborhoods;
