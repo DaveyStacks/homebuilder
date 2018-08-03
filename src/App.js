@@ -12,12 +12,18 @@ class App extends Component {
    const Home='';
    const Guest='';
     return (
-      <div className="App">
-        <div className="main">
-          
-          <CityLoc />
+
+
+      <BrowserRouter>
+        <div className="App">
+          <div className="main">
+            <Route exact path="/" component={Home} />
+            <Route path="/hoodname/:name" />
+            <Route path="/homemodel/:caption" />
+          </div>
+
         </div>
-      </div>
+      </BrowserRouter>
     );
   }
 }
