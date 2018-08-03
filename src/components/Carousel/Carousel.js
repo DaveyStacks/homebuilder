@@ -9,8 +9,6 @@ class ControlledCarousel extends React.Component {
   constructor(props) {
     super(props);
 
-    this.handleSelect = this.handleSelect.bind(this);
-
     this.state = {
       data: data,
       index: 0,
@@ -24,12 +22,14 @@ class ControlledCarousel extends React.Component {
 
 
 
+
   handleSelect(selectedIndex, e) {
     this.setState({
       index: selectedIndex,
       direction: e.direction
     });
   }
+
 
 
 
