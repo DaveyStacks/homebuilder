@@ -7,7 +7,9 @@ class App extends Component {
     return (
       <div className="App">
         <div className="main">
-            <ResultsContainer />
+            <div id="scroll"> 
+              <ResultsContainer />
+            </div>
         </div>
       </div>
     );

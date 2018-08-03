@@ -14,12 +14,6 @@ export default class Modal extends Component {
                 <div>
                     <div id='modal'
                         onClick={this.props.hideModal}>
-                        <h1>{this.props.community}</h1>
-                        <h1>{this.props.community}</h1>
-                        <h1>{this.props.community}</h1>
-                        <h1>{this.props.community}</h1>
-                        <h1>{this.props.community}</h1>
-                        <h1>{this.props.community}</h1>
                     </div>
                 </div>
             );
