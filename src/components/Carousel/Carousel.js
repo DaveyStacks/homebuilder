@@ -21,10 +21,6 @@ class ControlledCarousel extends React.Component {
     console.log(this.state);
   }
 
-  handleClick = event => {
-    event.preventDefault;
-
-  };
 
 
 
