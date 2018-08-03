@@ -1,23 +1,21 @@
 import React, { Component } from 'react';
-
+import Home from "./components/Home/Home";
+import { BrowserRouter, Route } from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
-import CityLoc from './components/CityLocation';
 
 class App extends Component {
-   
-
-  
   render() {
-   const Home='';
-   const Guest='';
     return (
-      <div className="App">
-        <div className="main">
-          
-          <CityLoc />
+      <BrowserRouter>
+        <div className="App">
+          <div className="main">
+            <Route exact path="/" component={Home} />
+            <Route path="/hoodname/:name" />
+            <Route path="/homemodel/:caption" />
+          </div>
         </div>
-      </div>
+      </BrowserRouter>
     );
   }
 }
