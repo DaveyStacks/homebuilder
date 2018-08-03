@@ -11,21 +11,21 @@ export default class CityLoc extends Component {
     constructor(props){
         super(props);
 
-      
+        
     }
     
     state = {
         data: data,
         
     }
+   
+    // handleOnClick = (e) => {
 
-    handleOnClick = (e) => {
-
-        <CityLocList
+    //     <CityLocList
              
-            />
+    //         />
 
-    }
+    // }
 
 
     render(){
@@ -33,10 +33,8 @@ export default class CityLoc extends Component {
        var CityLists;
         console.log("My Data", this.state.data.data.communities);
         const obj = this.state.data.data.communities;
-     // const JSONparse = JSON.parse(this.obj);
-        const LabelLists = obj.map(label =>
 
-           // cityl = label.cityLocation;
+        const LabelLists = obj.map(label =>
 
             CityLists = <CityLocList
               key={label.cityLocation.stateCode}
@@ -53,10 +51,7 @@ export default class CityLoc extends Component {
        
          <div className='container text-justify-center'> 
 
-
             {LabelLists}
-
-
 
          </div>  
     </div>

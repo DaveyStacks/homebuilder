@@ -7,10 +7,6 @@ export default class CityLocList extends Component {
         super(props);
     }
 
-
-
-
-
     render(){
 
        const {name , zip, stateCode, img} = this.props;
