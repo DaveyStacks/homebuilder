@@ -1,5 +1,6 @@
 import React from "react";
 import { Carousel, Row, Col } from "react-bootstrap";
+import { Link } from 'react-router-dom'
 import data from "../../data.json";
 import axios from "axios";
 import "./Carousel.css"
@@ -20,16 +21,12 @@ class ControlledCarousel extends React.Component {
     console.log(this.state);
   }
 
-  handleInputChange = event => {
-    // Destructure the name and value properties off of event.target
-    // Update the appropriate state
-    // console.log(this.props.pathName);
-    const { name, value } = event.target;
-    this.setState({
-      [name]: value
-    });
-    // console.log(this.state);
-  }
+  handleClick = event => {
+    event.preventDefault;
+
+  };
+
+
 
   handleSelect(selectedIndex, e) {
     this.setState({
@@ -46,15 +43,17 @@ class ControlledCarousel extends React.Component {
     console.log(this.state.data.data.communities);
     availableNeighborhoods = this.state.data.data.communities.map((data, index) =>
       <div>
-        <Carousel.Item>
+        <Carousel.Item name={data.name}>
           <img width={900} height={500} alt="900x500" src={`https://res.cloudinary.com/renderinghouse/image/upload/app/demo/thumbnails/${data.thumb}`} />
           <Col xs={12} sm={12} md={5} lg={5}>
             <div>
               <br />
               <br />
-              <img width={200} height={200} alt="200x200" src={`https://res.cloudinary.com/renderinghouse/image/upload/app/demo/assets/custom/${data.logo}`} />
+              <img width={200} height={250} alt="200x200" src={`https://res.cloudinary.com/renderinghouse/image/upload/app/demo/assets/custom/${data.logo}`} />
 
             </div>
+            <br /><br />
+            <Link to={`/hoodname/${data.name}`} activeClassName="active">Click here to view available models in {data.name}</Link>
           </Col>
 
           <br /><br />
